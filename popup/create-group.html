@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="popup.css" rel="stylesheet" />
+    <script src="../scripts/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <form>
+      <label for="create-group-name"> store as </label>
+      <input
+        type="text"
+        class="form-control"
+        id="create-group-name"
+        placeholder="group 1"
+      />
+      <button type="submit" class="btn btn-primary" id="submit-button">
+        create
+      </button>
+    </form>
+    <ul id="tab-list">
+      <template id="tab-li-template">
+        <li class="tab">
+          <div class="container">
+            <input type="text" class="form-control title-input" />
+            <input type="url" class="form-control url-input" />
+            <button type="button" class="btn btn-delete">X</button>
+          </div>
+        </li>
+      </template>
+    </ul>
+
+    <script src="create-group.js" type="module"></script>
+  </body>
+</html>
