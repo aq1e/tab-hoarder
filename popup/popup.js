@@ -10,9 +10,11 @@ for (const group of groups) {
     element.querySelector("div").addEventListener("click", () => {
         const urls = group.children.filter(node => node.url).map(node => node.url);  // get all urls in this group
         let windowId;
+        let emptyTabId;
 
         chrome.windows.create()  // create a new window
         .then(window => {
+            emptyTabId = window.tabs[0].id;
             return chrome.windows.update(window.id, {focused: true});  // focus on the new window
         })
         .then(window => {
@@ -20,6 +22,7 @@ for (const group of groups) {
             return Promise.all(urls.map(url => createTab(url, window.id)));  // open all urls
         })
         .then(newTabs => {
+            chrome.tabs.remove(emptyTabId);  // remove empty first tab
             return newTabs.map(newTab => newTab.id);  // get ids of new tabs
         })
         .then(async tabIds => {
