@@ -37,7 +37,7 @@ li:hover .group-name {
 }
 
 li:hover .restore-button {
-  display: block;
+  opacity: 1;
 }
 
 p {
@@ -45,13 +45,17 @@ p {
 }
 
 .restore-button{
+  font-size: medium;
+  font-weight: bolder;
   grid-row: 1;
   grid-column: 1;
-  display: none;
+  display: block;
   border: none;
   background-color: var(--dark-2);
   height: 100%;
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .btn-delete{
