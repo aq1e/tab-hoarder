@@ -9,16 +9,32 @@
     <script src="../scripts/bootstrap.min.js"></script>
   </head>
   <body>
-    <a href="popup.html">
-      <img src="../images/left-arrow.png" />
-    </a>
-    <form>
-      <label for="create-group-name"> store as </label>
-      <input type="text" class="form-control" id="create-group-name" />
-      <button type="submit" class="btn btn-primary" id="submit-button">
-        create
-      </button>
-    </form>
+    <div class="container">
+      <div
+        class="container"
+        style="flex-direction: column; align-items: center"
+      >
+        <label
+          for="create-group-name"
+          style="font-size: x-large; font-weight: bolder"
+        >
+          store as
+        </label>
+        <input type="text" class="form-control" id="create-group-name" />
+        <button
+          type="submit"
+          class="button"
+          id="submit-button"
+          style="padding: 5px"
+        >
+          create
+        </button>
+      </div>
+      <a href="popup.html" style="position: absolute; top: 5; left: 5">
+        <img src="../images/left-arrow.png" />
+      </a>
+    </div>
+
     <ul id="tab-list">
       <template id="tab-li-template">
         <li class="tab">
