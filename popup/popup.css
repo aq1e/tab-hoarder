@@ -1,12 +1,23 @@
+:root {
+  --dark-1: #ffdd91;
+  --dark-2: #d6b2a5;
+  --dark-3: #b093a3;
+  --dark-4: #787492;
+  --dark-5: #282e54;
+}
+
 body {
   min-width: 400px;
+  background-color: var(--dark-5);
+  color: var(--dark-1);
 }
-  
+
 ul {
   list-style-type: none;
   padding-inline-start: 0;
   margin: 1rem 0;
   padding: 0;
+  background-color: transparent;
 }
   
 li {
@@ -15,10 +26,10 @@ li {
 }
 
 li:nth-child(odd) {
-  background: #80808030;
+  background: var(--dark-5);
 }
 li:nth-child(even) {
-  background: #ffffff;
+  background: var(--dark-4);
 }
 
 li:hover .group-name {
@@ -38,7 +49,7 @@ p {
   grid-column: 1;
   display: none;
   border: none;
-  background-color: aquamarine;
+  background-color: var(--dark-2);
   height: 100%;
   width: 100%;
 }
@@ -72,6 +83,42 @@ li.tab > div.container {
   height: 50px;
   align-items: center;
   justify-items: center;
-  background-color: yellowgreen;
   padding: 0;
+}
+
+.container {
+  padding: 10px;
+}
+
+.button {
+  font-size: x-large;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  background-color: var(--dark-3);
+  color: var(--dark-1);
+  padding: 20px 0px;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.1s linear 0s;
+}
+
+.button-sliding:hover {
+  text-indent: -30px;
+}
+
+.button-sliding > .button-icon {
+  position: absolute;
+  right: 30px;
+  opacity: 0;
+  transition: opacity 0.1s ease-out, right 0.1s ease-out;
+}
+
+.button-sliding:hover > .button-icon {
+  right: 10px;
+  opacity: 1;
 }
