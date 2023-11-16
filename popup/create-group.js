@@ -25,7 +25,6 @@ document.querySelector("#tab-list").append(...elements);
 document.querySelector("#submit-button").addEventListener("click", async () => {
     let groupName = document.querySelector("#create-group-name").value;
     if (!groupName) { groupName = dateTimeString; }
-    console.log(groupName);
     const groupFolder = await chrome.bookmarks.create({'title': groupName });
     document.querySelectorAll('.tab').forEach( tab => {
         const title = tab.querySelector('.title-input').value;
@@ -36,4 +35,5 @@ document.querySelector("#submit-button").addEventListener("click", async () => {
             'title': title
         });
     });
+    window.location.href = "popup.html";
 });
