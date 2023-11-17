@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "cuddly-octo-doodle",
-    "description": "browsing session manager chrome extention",
+    "name": "Tab Hoarder",
+    "description": "Effortlessly store, manage, and restore tabs you are hoarding.",
     "version": "1.0",
     "action": {
       "default_popup": "popup/popup.html",
