@@ -48,7 +48,7 @@ img {
   width: 30px;
 }
 
-h2, h3 {
+h2, h3, label {
   font-weight: bolder;
   margin-bottom: 0;
 }
