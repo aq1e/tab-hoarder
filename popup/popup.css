@@ -1,5 +1,5 @@
 :root {
-  --dark-1: #ffdd91;
+  --dark-1: #f7e5bd;
   --dark-2: #d6b2a5;
   --dark-3: #b093a3;
   --dark-4: #787492;
@@ -48,6 +48,10 @@ img {
   width: 30px;
 }
 
+h2, h3 {
+  font-weight: bolder;
+  margin-bottom: 0;
+}
 .restore-button{
   font-size: medium;
   font-weight: bolder;
