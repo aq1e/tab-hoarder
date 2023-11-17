@@ -108,7 +108,7 @@ li.tab > div.container {
   position: relative;
   text-decoration: none;
   background-color: var(--dark-3);
-  color: var(--dark-1);
+  color: var(--dark-5);
   padding: 20px 0px;
   width: 100%;
   border-radius: 6px;
@@ -120,14 +120,14 @@ li.tab > div.container {
   text-indent: -30px;
 }
 
-.button-sliding > .button-icon {
+.button > .icon {
   position: absolute;
   right: 30px;
   opacity: 0;
   transition: opacity 0.1s ease-out, right 0.1s ease-out;
 }
 
-.button-sliding:hover > .button-icon {
+.button:hover > .icon {
   right: 10px;
   opacity: 1;
 }

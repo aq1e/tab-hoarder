@@ -7,6 +7,16 @@ for (const group of groups) {
     const element = template.content.firstElementChild.cloneNode(true);
 
     element.querySelector(".group-name").textContent = group.title;
+    element.querySelector(".delete-group-button").addEventListener("click", async (event) => {
+        event.stopPropagation();
+        try {
+            await chrome.bookmarks.removeTree(group.id);
+            element.remove();  // delete the li
+        } catch (error) {
+            console.error(error);
+        }
+    })
+
     element.querySelector("div").addEventListener("click", () => {
         const urls = group.children.filter(node => node.url).map(node => node.url);  // get all urls in this group
         let windowId;

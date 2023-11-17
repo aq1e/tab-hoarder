@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="bootstrap.min.css" rel="stylesheet" />
     <link href="popup.css" rel="stylesheet" />
-    <script src="../scripts/bootstrap.min.js"></script>
   </head>
   <body>
-    <template id="group-li-template">
-      <li class="group">
-        <div class="container">
-          <h3 class="group-name">group name</h3>
-          <button type="button" class="restore-button">Restore</button>
-        </div>
-      </li>
-    </template>
-
     <div class="container">
       <a class="button button-sliding" href="create-group.html">
         Store Current Tabs
-        <img class="button-icon" src="../images/right-arrow.png" />
+        <img class="icon" src="../images/right-arrow.png" />
       </a>
     </div>
 
-    <ul id="group-list"></ul>
+    <ul id="group-list">
+      <template id="group-li-template">
+        <li class="group">
+          <div class="container">
+            <h3 class="group-name">group name</h3>
+            <div class="restore-button button">
+              Restore
+              <img
+                class="icon delete-group-button"
+                src="../images/delete.png"
+              />
+            </div>
+          </div>
+        </li>
+      </template>
+    </ul>
 
     <script src="popup.js" type="module"></script>
   </body>
