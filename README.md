@@ -26,4 +26,4 @@ A tabs manager extention for Chromium-based browsers.
 
 ## Acknowledgments
 
-The icons used in this extension were generated with [Magician](https://magician.design/), a program created by Diagram.
+The button icons used in this extension were generated with [Magician](https://magician.design/), a program created by Diagram.

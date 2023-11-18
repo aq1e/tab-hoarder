@@ -3,9 +3,13 @@
     "name": "Tab Hoarder",
     "description": "Effortlessly store, manage, and restore tabs you are hoarding.",
     "version": "1.0",
+    "icons": {
+        "16": "images/lucille16.png",
+        "48": "images/lucille48.png",
+        "128": "images/lucille128.png"
+    },
     "action": {
-      "default_popup": "popup/popup.html",
-      "default_icon": "images/lucy.png"
+      "default_popup": "popup/popup.html"
     },
     "permissions": [
         "tabGroups",
