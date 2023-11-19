@@ -1,13 +1,21 @@
-# Tab Hoarder
+<div align="center">
+ <img src="./images/lucille128.png">
+ <h1><strong>Tabby Hoarder</strong></h1>
 
 A tabs manager extension for Chromium-based browsers.
 
+</div>
+
 ## Features
 
-- **Store Away Tabs**: Create a bookmarks folder and store all tabs in the currently active window  
-  <img src="./demo/create-group.gif" width=400>
-- **Restore Tabs**: Open up a group of tabs in a new window  
-  <img src="./demo/restore-delete.gif" width=400>
+- **Store Away Tabs**: Create a bookmarks folder and store all tabs in the currently active window
+  <div align=center>
+    <img src="./demo/create-group.gif" width=350>
+  </div>
+- **Restore Tabs**: Open up a group of tabs in a new window
+  <div align=center>
+    <img src="./demo/restore-delete.gif" width=350>
+  </div>
 
 ## Useful if you...
 
