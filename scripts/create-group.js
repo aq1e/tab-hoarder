@@ -9,7 +9,6 @@ const elements = new Set();
 
 for (const tab of tabs) {
     const element = template.content.firstElementChild.cloneNode(true);
-    const pathname = new URL(tab.url).pathname.slice("/docs".length);
 
     element.querySelector(".url-input").value = tab.url;
     element.querySelector(".title-input").value = tab.title;
@@ -25,7 +24,11 @@ document.querySelector("#tab-list").append(...elements);
 document.querySelector("#submit-button").addEventListener("click", async () => {
     let groupName = document.querySelector("#create-group-name").value;
     if (!groupName) { groupName = dateTimeString; }
-    const groupFolder = await chrome.bookmarks.create({'title': groupName });
+    const parentId = await getTabbyHoarderTreeId();
+    const groupFolder = await chrome.bookmarks.create({
+        title: groupName, 
+        parentId: parentId
+    });
     document.querySelectorAll('.tab').forEach( tab => {
         const title = tab.querySelector('.title-input').value;
         const url = tab.querySelector('.url-input').value;
@@ -37,3 +40,20 @@ document.querySelector("#submit-button").addEventListener("click", async () => {
     });
     window.location.href = "popup.html";
 });
+
+const getTabbyHoarderTreeId = async function () {
+    try {
+        // search for tabby-hoarder bookmarks folder
+        const results = await chrome.bookmarks.search({title: "tabby-hoarder", url: null});
+
+        if (results.length > 0) {  // if it exists, return it
+            return results[0].id;
+        } else {  // if not, create folder then return it
+            const folder = await chrome.bookmarks.create({title: "tabby-hoarder"});
+            console.log("tabby-hoarder folder created because it wasn't found:", folder);
+            return folder.id;
+        }
+    } catch (error) {
+        console.error("error:", error);
+    }
+}
