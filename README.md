@@ -1,6 +1,8 @@
 <div align="center">
  <img src="./images/lucille128.png">
- <h1><strong>Tabby Hoarder</strong></h1>
+ <a href="https://chromewebstore.google.com/detail/tabby-hoarder/nioldpiplkfjcdokagnkdljlbckinndn">
+  <h1><strong>Tabby Hoarder</strong></h1>
+ </a>
 
 A tabs manager extension for Chromium-based browsers.
 
@@ -23,6 +25,12 @@ A tabs manager extension for Chromium-based browsers.
 - have a set of websites that you always need, and would like to open them together quickly.
 
 ## Installation
+
+- install it from [Chrome web store](https://chromewebstore.google.com/detail/tabby-hoarder/nioldpiplkfjcdokagnkdljlbckinndn)
+
+  <br/>
+  Or...
+  <br/>
 
 - Clone the repository
 - Go to <chrome://extensions>
